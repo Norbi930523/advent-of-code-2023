@@ -2,16 +2,13 @@ package com.norbi930523.aoc2023.day2
 
 import com.norbi930523.aoc2023.io.TaskInputReader
 
-class Day2Solution {
+class Day2Solution(
+    private val taskInputReader: TaskInputReader,
+    private val gameRules: CubeGameRules
+) {
 
     fun run() {
-        val gameRules = CubeGameRules(
-            maxRed = 12,
-            maxGreen = 13,
-            maxBlue = 14
-        )
-
-        val games = TaskInputReader("/day2.txt")
+        val games = taskInputReader
             .readLines()
             .filter { it.isNotBlank() }
             .map { CubeGame.parse(it) }

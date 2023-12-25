@@ -2,10 +2,12 @@ package com.norbi930523.aoc2023.day1
 
 import com.norbi930523.aoc2023.io.TaskInputReader
 
-class Day1Solution {
+class Day1Solution(
+    private val taskInputReader: TaskInputReader
+) {
 
     fun run() {
-        val values = TaskInputReader("/day1.txt")
+        val values = taskInputReader
             .readLines()
             .map { CalibrationValue.parse(it) }
 
