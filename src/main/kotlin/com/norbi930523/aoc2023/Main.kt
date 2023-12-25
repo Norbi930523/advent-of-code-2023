@@ -3,11 +3,13 @@ package com.norbi930523.aoc2023
 import com.norbi930523.aoc2023.day1.Day1Solution
 import com.norbi930523.aoc2023.day2.CubeGameRules
 import com.norbi930523.aoc2023.day2.Day2Solution
+import com.norbi930523.aoc2023.day3.Day3Solution
 import com.norbi930523.aoc2023.io.FileTaskInputReader
 
 fun main() {
     Solution.runDay1Solution()
     Solution.runDay2Solution()
+    Solution.runDay3Solution()
 }
 
 private object Solution {
@@ -32,6 +34,14 @@ private object Solution {
         )
 
         Day2Solution(FileTaskInputReader("/day2.txt"), gameRules).run()
+
+        println(SEPARATOR)
+    }
+
+    fun runDay3Solution() {
+        println("Day 3 solution:")
+
+        Day3Solution(FileTaskInputReader("/day3.txt")).run()
 
         println(SEPARATOR)
     }
