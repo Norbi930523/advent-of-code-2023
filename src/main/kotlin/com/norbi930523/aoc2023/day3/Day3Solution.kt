@@ -7,7 +7,7 @@ class Day3Solution(
 ) {
 
     fun run() {
-        val engineSchematic = EngineSchematic.parse(taskInputReader.readLines().filter { it.isNotBlank() })
+        val engineSchematic = EngineSchematicInputParser.parse(taskInputReader.readLines().filter { it.isNotBlank() })
 
         val sumOfEnginePartNumbers = engineSchematic.partNumbers.sumOf { it.number }
         val sumOfEngineGearRatios = engineSchematic.gears.sumOf { it.ratio }
